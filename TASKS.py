@@ -12,7 +12,6 @@ def mappingYesOrNo(value):
 df['Hobbyist'] = df['Hobbyist'].apply(mappingYesOrNo)
 print(df['Hobbyist'])
 
-
 # Changing the name of ConvertedComp into Salary
 df.rename(columns={'ConvertedComp': 'Salary'}, inplace=True)
 
