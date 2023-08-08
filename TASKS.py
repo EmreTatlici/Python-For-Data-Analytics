@@ -9,7 +9,6 @@ schema_df = pd.read_csv('survey_results_schema.csv')
 def mappingYesOrNo(value):
     return value in ['Yes', 'True', 'TRUE', 'yes']
 
-
 df['Hobbyist'] = df['Hobbyist'].apply(mappingYesOrNo)
 print(df['Hobbyist'])
 
