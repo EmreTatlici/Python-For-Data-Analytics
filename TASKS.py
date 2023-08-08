@@ -6,8 +6,9 @@ df = pd.read_csv('survey_results_public.csv')
 schema_df = pd.read_csv('survey_results_schema.csv')
 
 # Mapping Yes or No values as True or False boolean expression
-def mappingYesOrNo(hobbyist):
-    return hobbyist in ['Yes']  
+def mappingYesOrNo(value):
+    return value in ['Yes', 'True', 'TRUE', 'yes']
+
 
 df['Hobbyist'] = df['Hobbyist'].apply(mappingYesOrNo)
 print(df['Hobbyist'])
